@@ -1,0 +1,6 @@
+framework module PEPReaderSDK_YFD {
+  umbrella header "PEPReaderSDK_YFD.h"
+
+  export *
+  module * { export * }
+}
