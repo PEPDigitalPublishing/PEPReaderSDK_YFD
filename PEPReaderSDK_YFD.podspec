@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => 'https://github.com/PEPDigitalPublishing/PEPReaderSDK_YFD.git'}
 
-  s.vendored_frameworks = 'PEPReaderSDK.framework'
+  s.vendored_frameworks = 'PEPReaderSDK_YFD.framework'
 
   s.resource = 'PDFReaderSDKDiandu.xcassets'
 
