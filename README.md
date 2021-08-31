@@ -5,7 +5,7 @@ PEPReaderSDK_YFD
 由于依赖的福昕RDK已经升级到`iOS10.0`+，故人教点读SDK兼容的最低版本为`iOS 10.0`。
 
 
-## 使用说明
+## 使用说明-详见头文件PRStandardViewController+YFD
 
 由于人教点读SDK依赖的福昕RDK文件较大，无法上传GitHub，可以[点击这里](https://rjszgsres.mypep.cn/rjdd/iOSFoxitRDK/FoxitRDK.framework.zip)下载，然后将解压出的`FoxitRDK.framework`导入到项目中。(已更新至7.3版本)
 

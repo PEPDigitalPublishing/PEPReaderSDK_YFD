@@ -22,7 +22,12 @@ typedef NS_ENUM(NSUInteger, PRBookSubject) {
     PRBookSubjectMusic          = 22,
     /// 体育
     PRBookSubjectSports          = 26,
-
+    /// 物理
+    PRBookSubjectPhysics          = 41,
+    /// 化学
+    PRBookSubjectChemistry          = 42,
+    /// 生物
+    PRBookSubjectBiology          = 43,
 };
 
 // MARK: - PRBookModel

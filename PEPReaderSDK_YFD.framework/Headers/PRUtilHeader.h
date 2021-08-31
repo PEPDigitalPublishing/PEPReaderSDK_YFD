@@ -24,7 +24,11 @@ typedef NS_ENUM(NSUInteger, PREvaluateEngineType) {
     PREvaluateEngineTypeOther               /// 其他测评引擎
 };
 
-
+/** SDK类型 */
+typedef NS_ENUM(NSUInteger, PDFReaderSDKType) {
+    PDFReaderSDKTypeCommon,            //通用
+    PDFReaderSDKType_YFD,              //猿辅导
+};
 
 /**
  播放类型
@@ -41,7 +45,19 @@ typedef NS_ENUM(NSUInteger, PRPlayingType) {
     PRPlayingTypeRepeat,
 };
 
+/**
+ 播放类型(SDK用)
+ 
+ - PRYFDPlayingTypeDefault: 默认
+ - PRYFDPlayingTypeClick: 点读
+ - PRYFDPlayingTypeContinue: 连读
 
+ */
+typedef NS_ENUM(NSUInteger, PRYFDPlayingType) {
+    PRYFDPlayingTypeDefault,
+    PRYFDPlayingTypeClick,
+    PRYFDPlayingTypeContinue
+};
 
 /**
  工具栏按钮类型
