@@ -14,8 +14,14 @@
  跳转页码计算方式(最小为0)
  1.跳到常规页
  pageIndex =  书页上的页码 - ex_pages + titlePages
- 2.跳到扉页(带有S标志,例如 S2)
- pageIndex =  书页上的页码 - ex_pages
+ 2.跳到扉页(正式页码前的页,大多带有S标志,例如 S2)
+ pageIndex =  书页上的页码
+ 
+ if (书页上的页码 < self.bookModel.titlePages) {
+    return 书页上的页码;
+ } else {
+    return 书页上的页码 - ex_pages + titlePages;
+ }
  */
 
 /// 常规初始化方法
@@ -38,10 +44,10 @@ typedef void(^PREvaluateViewBackBlock) (UIViewController *evaluateVC,NSError *er
 /// @param bookModel bookModel
 /// @param pageIndex 需要跳转的页码,页码计算详见上方注释(
 /// @param block 结果回调
-/// @param evaluateVC 返回评测控制器或者评测选择列表
+/// @param evaluateVC 返回评测控制器或者评测选择列表(控制器名称PREvaluateViewController | PREvaluateListViewController,删除导航栈中控制器用)
 /// @param error 返回错误信息 101-bookModel.bookID为空  102-无网络 103-当前页没有可评测内容  104-评测数据获取失败，请重试
 + (void)getEvaluateViewControllerWithBookModel:(PRBookModel*)bookModel pageIndex:(NSUInteger)pageIndex backBlock:(PREvaluateViewBackBlock)block;
-
+//PREvaluateViewController  PREvaluateListViewController
 /**
  ★★★评测结果用通知形式发送(样式如下)
  通知名称  KPREVALUATERESULT_YFD
