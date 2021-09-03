@@ -38,6 +38,13 @@
 /// @param resID  锚点资源id,播放类型为点读时需要传入,为空仅打开PDF 例:(英语新起点一年级上)resid= 12120011011230300001529562293446  跳转页码11
 + (instancetype)tempExperienceWithBookID:(NSString *)bookID readType:(PRYFDPlayingType)type pageIndex:(NSInteger)pageIndex resID:(NSString*)resID;
 
+/// 已购买,跳页点读 初始化方法(内部校验购买权限,未购买跳转到第0页)
+/// @param bookID 教材ID
+/// @param type 播放类型  此方法仅支持两种模式 PRYFDPlayingTypeClick: 点读 | PRYFDPlayingTypeContinue: 连读
+/// @param pageIndex 需要跳转的页码,页码从0开始,页码计算详见上方注释(
+/// @param resID  锚点资源id,播放类型为点读时需要传入,为空仅打开PDF 例:(英语新起点一年级上)resid= 12120011011230300001529562293446  跳转页码11
++ (instancetype)jumpToReadingWithBookID:(NSString *)bookID readType:(PRYFDPlayingType)type pageIndex:(NSInteger)pageIndex resID:(NSString*)resID;
+
 
 typedef void(^PREvaluateViewBackBlock) (UIViewController *evaluateVC,NSError *error);
 /// 根据页码获取评测控制器    (需要请求网络数据,可适当展示loading)
