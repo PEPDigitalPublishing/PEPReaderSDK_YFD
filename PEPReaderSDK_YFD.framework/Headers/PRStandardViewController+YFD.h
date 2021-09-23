@@ -26,7 +26,7 @@
 
 /// 常规初始化方法
 /// @param bookID 教材ID
-/// @param pageIndex 需要跳转的页码,页码计算详见上方注释((仅限已购买情况下,未购买情况下设置无效): 页码从0开始，阅读器将会自动根据记录的阅读进度进行跳转(仅已购买教材会记录阅读进度)
+/// @param pageIndex 需要跳转的页码,页码计算详见上方注释(仅限已购买情况下,未购买情况下设置无效)
 /// @param purchase 是否已购买：YES为已购买，阅读无限制；false为体验模式，仅可阅读前5页。默认为NO
 + (instancetype)openWithBookID:(NSString *)bookID pageIndex:(NSInteger)pageIndex purchase:(BOOL)purchase;
 
