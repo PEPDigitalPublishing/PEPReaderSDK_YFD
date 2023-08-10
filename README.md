@@ -1,5 +1,12 @@
 # PEPReaderSDK_YFD(猿辅导)
 PEPReaderSDK_YFD
+
+### 更新记录
+
+时间 | 版本号 | 更新内容
+-|:-:|:-:
+2023-08-10   | v2.8.6 | 适配新的评测控制器,福昕SDK更新至7.4.0
+
 ## 系统要求
 
 由于依赖的福昕RDK已经升级到`iOS10.0`+，故人教点读SDK兼容的最低版本为`iOS 10.0`。
@@ -7,7 +14,7 @@ PEPReaderSDK_YFD
 
 ## 使用说明-详见头文件PRStandardViewController+YFD
 
-由于人教点读SDK依赖的福昕RDK文件较大，无法上传GitHub，可以[点击这里](https://rjszgsres.mypep.cn/rjdd/iOSFoxitRDK/FoxitRDK.framework.zip)下载，然后将解压出的`FoxitRDK.framework`导入到项目中。(已更新至7.3版本)
+由于人教点读SDK依赖的福昕RDK文件较大，无法上传GitHub，可以[点击这里](https://rjszgsres.mypep.cn/rjdd/iOSFoxitRDK/FoxitRDK.framework.zip)下载，然后将解压出的`FoxitRDK.framework`导入到项目中。(已更新至7.4版本)
 
 
 ### 接入

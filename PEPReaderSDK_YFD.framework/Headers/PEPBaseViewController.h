@@ -23,6 +23,14 @@ typedef NS_ENUM(NSUInteger, PEPRequestDataStatus) {
     PEPRequestDataStatusFailed,
 };
 
+/**
+ 语音评测，导航类型
+ */
+typedef NS_ENUM(NSUInteger, PRVoiceEvaluateNavigationType) {
+    PRVoiceEvaluateNavigationType_Left, //返回按钮
+    PRVoiceEvaluateNavigationType_LeftAndRight  //返回和右侧按钮
+};
+
 @interface PEPBaseViewController : UIViewController
 
 /**是否需要显示带人教logo的titleView，默认为false*/
@@ -48,6 +56,7 @@ typedef NS_ENUM(NSUInteger, PEPRequestDataStatus) {
 
 
 - (void)restoreNavigationBarStyle;
+
 
 
 // MARK: - Loading
@@ -117,7 +126,15 @@ typedef NS_ENUM(NSUInteger, PEPRequestDataStatus) {
 
 - (void)hideNetworkErrorView;
 
+// MARK: - CustomNavigation 语音测评 导航
 
+- (void)loadCustomNavigationViewWithType:(PRVoiceEvaluateNavigationType)type;
+
+/**
+ 语音测评-导航条自定义返回按钮设置返回图片 图片大小24*24  / 36*36 如果设置自定义图片，此方法在loadCustomNavigationViewWithType方法之前调用
+ */
+
+- (void)configNavigationCustomBackButtonWithImage:(UIImage *)image;
 
 @end
 

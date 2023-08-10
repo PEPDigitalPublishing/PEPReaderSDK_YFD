@@ -9,7 +9,11 @@
 #import "PRStandardViewController.h"
 
 @interface PRStandardViewController (YFD)
-
+/**
+ 08-10-2023更新日志
+ getEvaluateViewControllerWithBookModel接口: 1.返回的评测控制器更替为新控制器
+                                    2.返回的评测数据增加新数据
+ */
 /**
  跳转页码计算方式(最小为0)
  1.跳到常规页
@@ -51,7 +55,7 @@ typedef void(^PREvaluateViewBackBlock) (UIViewController *evaluateVC,NSError *er
 /// @param bookModel bookModel
 /// @param pageIndex 需要跳转的页码,页码计算详见上方注释(
 /// @param block 结果回调
-/// @param evaluateVC 返回评测控制器或者评测选择列表(控制器名称PREvaluateViewController | PREvaluateListViewController,删除导航栈中控制器用)
+/// @param evaluateVC 返回评测控制器或者评测选择列表(控制器名称PRVoiceEvaluateViewController | PREvaluateListController,删除导航栈中控制器用)
 /// @param error 返回错误信息 101-bookModel.bookID为空  102-无网络 103-当前页没有可评测内容  104-评测数据获取失败，请重试
 + (void)getEvaluateViewControllerWithBookModel:(PRBookModel*)bookModel pageIndex:(NSUInteger)pageIndex backBlock:(PREvaluateViewBackBlock)block;
 //PREvaluateViewController  PREvaluateListViewController
@@ -86,6 +90,12 @@ typedef void(^PREvaluateViewBackBlock) (UIViewController *evaluateVC,NSError *er
                  words              评测语句结果组  score 百分制分数
                                         type  类型 0:正确，16: 未发音，32: 重复发音，64: 回读，128: 替换
                                         word 单词或者汉字内容
+                 08-10-2023 新增返回数据
+                 integrity_score  完整度分
+                 fluency_score   流畅度分
+                 accuracy_score  准确度分 只有英文有准确度
+                 phone_score    声韵分 中文用此字段代替准确度分 指声母和韵母正确率的得分
+                 tone_score       调型分 指声调正确率的得分
  
  
  */
