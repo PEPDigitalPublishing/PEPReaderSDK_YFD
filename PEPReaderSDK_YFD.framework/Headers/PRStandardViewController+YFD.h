@@ -13,6 +13,9 @@
  08-10-2023更新日志
  getEvaluateViewControllerWithBookModel接口: 1.返回的评测控制器更替为新控制器
                                     2.返回的评测数据增加新数据
+ 
+ 08-25-2023更新日志
+ 新增评测列表页-购买弹窗提示通知 KPREVALUATE_NOACCESS
  */
 /**
  跳转页码计算方式(最小为0)
@@ -58,7 +61,13 @@ typedef void(^PREvaluateViewBackBlock) (UIViewController *evaluateVC,NSError *er
 /// @param evaluateVC 返回评测控制器或者评测选择列表(控制器名称PRVoiceEvaluateViewController | PREvaluateListController,删除导航栈中控制器用)
 /// @param error 返回错误信息 101-bookModel.bookID为空  102-无网络 103-当前页没有可评测内容  104-评测数据获取失败，请重试
 + (void)getEvaluateViewControllerWithBookModel:(PRBookModel*)bookModel pageIndex:(NSUInteger)pageIndex backBlock:(PREvaluateViewBackBlock)block;
-//PREvaluateViewController  PREvaluateListViewController
+
+/**
+ ★★★评测列表中点击非免费内容通知--- 对接方需要自己定制体验模式结束、引导用户购买的弹窗
+ 通知名称  KPREVALUATE_NOACCESS
+ 返回评测列表控制器(NSDictionary形式)  notification.userInfo
+ {@"viewcontroller": <PREvaluateListController>, @"bookModel": <PRBookModel>}
+ */
 /**
  ★★★评测结果用通知形式发送(样式如下)
  通知名称  KPREVALUATERESULT_YFD
