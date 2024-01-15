@@ -56,7 +56,7 @@
 typedef void(^PREvaluateViewBackBlock) (UIViewController *evaluateVC,NSError *error);
 /// 根据页码获取评测控制器    (需要请求网络数据,可适当展示loading)
 /// @param bookModel bookModel
-/// @param pageIndex 需要跳转的页码,页码计算详见上方注释(
+/// @param pageIndex 需要跳转的页码,页码计算详见上方注释
 /// @param block 结果回调
 /// @param evaluateVC 返回评测控制器或者评测选择列表(控制器名称PRVoiceEvaluateViewController | PREvaluateListController,删除导航栈中控制器用)
 /// @param error 返回错误信息 101-bookModel.bookID为空  102-无网络 103-当前页没有可评测内容  104-评测数据获取失败，请重试
