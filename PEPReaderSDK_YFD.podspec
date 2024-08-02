@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 
   s.name         = 'PEPReaderSDK_YFD'
 
-  s.version      = '2.8.15'
+  s.version      = '2.8.16'
 
   s.summary      = '人教点读新SDK'
 
@@ -28,8 +28,12 @@ Pod::Spec.new do |s|
   s.dependency 'Masonry'
   s.dependency 'SAMKeychain'
   s.dependency 'SSZipArchive'
-    s.dependency 'iosMath'
-    s.dependency 'MZTimerLabel'
+  s.dependency 'iosMath'
+  
+  s.dependency 'MZTimerLabel'
+  s.dependency 'PEPBigData', '>= 0.4.4'
+  s.dependency 'PEPNetworking', '>= 0.4.1'
+  
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 

@@ -13,6 +13,7 @@ PEPReaderSDK_YFD
 2023-10-20   | v2.8.13 | 修复测试录音异常问题
 2024-01-15   | v2.8.14 | 修复点读时锚点为空导致的闪退问题;语音评测增加容错处理
 2024-04-15   | v2.8.15 | 修复点读时锚点为空导致的闪退问题;
+2024-08-02   | v2.8.16 | 修复反馈的问题
 ## 系统要求
 
 由于依赖的福昕RDK已经升级到`iOS10.0`+，故人教点读SDK兼容的最低版本为`iOS 10.0`。
@@ -30,19 +31,12 @@ PEPReaderSDK_YFD
 在`podfile`中添加如下代码，然后`pod install`:
 
 ```
-
-pod 'PEPNetworking', :git => 'https://github.com/PEPDigitalPublishing/PEPNetworking.git'
-
-pod 'PEPBigData', :git => 'https://github.com/PEPDigitalPublishing/PEPBigData.git'
-
 pod 'PEPReaderSDK_YFD', :git => 'https://github.com/PEPDigitalPublishing/PEPReaderSDK_YFD.git'
 
 # 讯飞语音SDK
 pod 'PEPiFlyMSC', :git => 'https://github.com/PEPDigitalPublishing/PEPiFlyMSC.git'
 
-pod 'SSZipArchive'
-
-pod 'iosMath'
+pod 'FLAnimatedImage', '~> 1.0'
 
 ```
 
