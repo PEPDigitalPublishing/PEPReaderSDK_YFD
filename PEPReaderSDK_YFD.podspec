@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 
   s.name         = 'PEPReaderSDK_YFD'
 
-  s.version      = '2.8.18'
+  s.version      = '2.8.19'
 
   s.summary      = '人教点读新SDK'
 
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.vendored_frameworks = 'PEPReaderSDK_YFD.framework'
 
-  s.resources = ['PDFReaderSDKDiandu.xcassets', 'PEPReaderSDK_YFD.framework/PEPPDFReaderSDK.bundle']
+  s.resources = ['PDFReaderSDKDiandu.xcassets', 'PEPReaderSDK_YFD.framework/PEPPDFReaderSDK.bundle','PrivacyInfo.xcprivacy']
 
   s.frameworks   = 'MobileCoreServices', 'Security', 'CoreTelephony', 'AudioToolbox', 'CoreGraphics', 'QuartzCore', 'SystemConfiguration', 'AddressBook', 'CoreLocation', 'Contacts'
 
